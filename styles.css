@@ -1,0 +1,395 @@
+/* Base Styles */
+
+body {
+    font-family: 'Kanit', sans-serif;
+    background-color: #f8f9fa;
+    color: #000000;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.container {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    /* Reduced padding */
+    width: 100%;
+    max-width: 600px;
+    border-radius: 8px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: #343a40;
+    margin-bottom: 15px;
+    /* Reduced margin-bottom */
+    transition: color 0.3s;
+}
+
+form {
+    width: 100%;
+}
+
+.form-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    /* Reduced gap */
+    flex-wrap: wrap;
+}
+
+.form-group {
+    flex: 1;
+    margin-bottom: 10px;
+    /* Reduced margin-bottom */
+    max-width: 300px;
+    transition: color 0.3s;
+}
+
+label {
+    font-weight: bold;
+    color: #495057;
+    display: block;
+    margin-bottom: 3px;
+    /* Reduced margin-bottom */
+    transition: color 0.3s;
+}
+
+input[type="text"],
+input[type="time"] {
+    border-radius: 5px;
+    padding: 8px;
+    /* Reduced padding */
+    font-size: 1rem;
+    width: 100%;
+    box-sizing: border-box;
+    color: #000000;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+input[type="text"]:focus,
+input[type="time"]:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, 0.25);
+}
+
+#formatted-datetime {
+    margin-top: 15px;
+    /* Reduced margin-top */
+    color: #343a40;
+    transition: color 0.3s;
+}
+
+#countdown {
+    font-size: 2.5rem;
+    color: #000000;
+    margin-top: 15px;
+    /* Reduced margin-top */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: color 0.3s;
+}
+
+.time-unit {
+    padding: 15px;
+    /* Reduced padding */
+    background: #ffffff;
+    color: #000000;
+    border-radius: 10px;
+    text-align: center;
+    min-width: 90px;
+    font-size: 2rem;
+    transition: background-color 0.3s, color 0.3s;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 0 8px;
+    /* Reduced margin */
+}
+
+.time-unit span {
+    display: block;
+    font-size: 0.75rem;
+    color: #6c757d;
+    transition: color 0.3s;
+}
+
+
+/* Dark Mode Styles */
+
+body.dark-mode {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+h1.dark-mode {
+    color: #ffffff;
+}
+
+label.dark-mode {
+    color: #e0e0e0;
+}
+
+input[type="text"].dark-mode,
+input[type="time"].dark-mode {
+    border: 1px solid #444;
+    background-color: #333;
+    color: #e0e0e0;
+}
+
+#formatted-datetime.dark-mode {
+    color: #e0e0e0;
+}
+
+#countdown.dark-mode {
+    color: #ffffff;
+}
+
+.time-unit.dark-mode {
+    background: #333;
+    color: #ffffff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.time-unit span.dark-mode {
+    color: #b0b0b0;
+}
+
+
+/* New Year Countdown Styles */
+
+#new-year-countdown {
+    text-align: center;
+    margin-top: 3rem;
+    /* Reduced margin-top */
+}
+
+#new-year-countdown h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    /* Reduced margin-bottom */
+    transition: color 0.3s;
+}
+
+#new-year-countdown .time-unit {
+    padding: 15px;
+    /* Reduced padding */
+    background: #ffffff;
+    color: #000000;
+    border-radius: 10px;
+    text-align: center;
+    min-width: 90px;
+    font-size: 2rem;
+    transition: background-color 0.3s, color 0.3s;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 0 8px;
+    /* Reduced margin */
+}
+
+#new-year-countdown .time-unit span {
+    display: block;
+    font-size: 0.75rem;
+    color: #6c757d;
+    transition: color 0.3s;
+}
+
+#new-year-countdown.dark-mode .time-unit {
+    background: #333;
+    color: #ffffff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+#new-year-countdown.dark-mode .time-unit span {
+    color: #b0b0b0;
+}
+
+
+/* Support Me Button Position */
+
+.support-me {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    z-index: 1000;
+}
+
+.support-me .btn {
+    font-size: 0.875rem;
+    border-radius: 4px;
+    border: none;
+    outline: none;
+    width: 130px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+
+/* Theme Select Position */
+
+#theme-select {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    z-index: 1000;
+    padding: 3px 6px;
+    /* Reduced padding */
+    font-size: 0.875rem;
+    border-radius: 4px;
+    background-color: #000000;
+    color: white;
+    border: none;
+    outline: none;
+    width: 130px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+
+/* Time Zone Selector Styles */
+
+#timezone-select {
+    position: fixed;
+    top: 60px;
+    left: 10px;
+    z-index: 1000;
+    padding: 3px;
+    font-size: 16px;
+    width: 215px;
+}
+
+
+/* Theme Select Styles for Different Modes */
+
+body.light-mode #theme-select {
+    background-color: #000000;
+    color: white;
+}
+
+body.dark-mode #theme-select {
+    background-color: #ffffff;
+    color: black;
+}
+
+body.system-mode #theme-select {
+    background-color: #ffffff;
+    color: black;
+}
+
+
+/* Responsive Styles for Mobile */
+
+@media (max-width: 768px) {
+    .container {
+        padding: 15px;
+        /* Reduced padding */
+        max-width: 90%;
+    }
+    h1 {
+        font-size: 2rem;
+    }
+    .form-row {
+        flex-direction: column;
+        gap: 8px;
+        /* Reduced gap */
+    }
+    .form-group {
+        max-width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 8px;
+        /* Reduced gap */
+    }
+    label {
+        flex: 1;
+        font-size: 0.875rem;
+    }
+    input[type="text"],
+    input[type="time"] {
+        font-size: 0.875rem;
+        flex: 2;
+    }
+    #countdown {
+        font-size: 2rem;
+    }
+    .time-unit {
+        padding: 12px;
+        /* Reduced padding */
+        font-size: 1.5rem;
+        min-width: 70px;
+    }
+    #new-year-countdown .time-unit {
+        padding: 12px;
+        /* Reduced padding */
+        font-size: 1.5rem;
+        min-width: 70px;
+    }
+    #timezone-select {
+        width: 100%;
+        top: 10px;
+        left: 10px;
+    }
+    .support-me .btn {
+        font-size: 0.70rem;
+        width: 85px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 10px;
+    }
+    h1 {
+        font-size: 1.5rem;
+    }
+    .form-group {
+        max-width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 8px;
+        /* Reduced gap */
+    }
+    label {
+        font-size: 0.75rem;
+    }
+    input[type="text"],
+    input[type="time"] {
+        font-size: 0.75rem;
+    }
+    #countdown {
+        font-size: 1.5rem;
+    }
+    .time-unit {
+        padding: 8px;
+        /* Reduced padding */
+        font-size: 1.25rem;
+        min-width: 60px;
+    }
+    #new-year-countdown .time-unit {
+        padding: 8px;
+        /* Reduced padding */
+        font-size: 1.25rem;
+        min-width: 60px;
+    }
+    #timezone-select {
+        font-size: 14px;
+        width: 100%;
+        top: 0;
+    }
+    .support-me .btn {
+        font-size: 0.70rem;
+        width: 85px;
+    }
+    #theme-select {
+        font-size: 0.70rem;
+        width: 105px;
+    }
+}
